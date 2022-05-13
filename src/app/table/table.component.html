@@ -1,0 +1,32 @@
+<div>
+    
+    
+    <div>
+      <table class="table table-striped table-bordered table-hover" height="100px">
+       <thead>
+         <tr>
+           <th >Name</th>
+           <th>Dame</th>
+           <th>Defend</th>
+           <th>Speed</th>
+           <th>Price</th>
+           <th>Avatar</th>
+         </tr>
+       </thead>
+       <tbody >
+         <tr *ngFor="let champ of champs ">
+           <app-champ [champName]="champ.name" ></app-champ>   
+           
+           <td class="color-dame"><app-dame [champDame]="champ.dame"></app-dame></td>
+           <td>{{champ.defend}}</td>
+           <td>{{champ.speed}}</td>
+           <td>{{champ.price}}</td>
+           <td>
+               <app-avatar [price]="champ.price" [src]="champ.avatar" src=""></app-avatar>
+             <!-- <img src={{champ.avatar}} alt={{champ.name}} height="100px"> -->
+           </td>
+         </tr>
+       </tbody>
+      </table>
+    </div>
+  </div>
